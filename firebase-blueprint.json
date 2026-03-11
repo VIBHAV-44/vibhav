@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "BMIRecord": {
+      "title": "BMI Record",
+      "description": "A single BMI calculation entry for a user.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The UID of the user who owns this record."
+        },
+        "weight": {
+          "type": "number",
+          "description": "Weight in kilograms."
+        },
+        "height": {
+          "type": "number",
+          "description": "Height in centimeters."
+        },
+        "bmi": {
+          "type": "number",
+          "description": "Calculated BMI value."
+        },
+        "category": {
+          "type": "string",
+          "description": "BMI category (e.g., Normal, Overweight)."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the record was created."
+        }
+      },
+      "required": ["userId", "weight", "height", "bmi", "category", "timestamp"]
+    }
+  },
+  "firestore": {
+    "bmiRecords": {
+      "schema": "BMIRecord",
+      "description": "Collection of BMI history records."
+    }
+  }
+}

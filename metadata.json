@@ -1,0 +1,5 @@
+{
+  "name": "BMI Tracker Pro",
+  "description": "Calculate your BMI and track your health progress over time with a secure history log.",
+  "requestFramePermissions": []
+}
